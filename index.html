@@ -24,17 +24,21 @@
   <p>A GIF showcase of baseball players and managers getting the ol' heave-ho.</p>
   <p>Want more information on ejections and umpires? Visit <a href="https://www.closecallsports.com/" target="_blank">Close Call Sports</a>.</p>
   <hr>
-  <!--
-  <a onclick="toggleGif('ID-OF-BELOW')">DD Month YYYY - TEAM Player (Umpire)</a>
-  <img id="INSERT-ABOVE" style="display:none" src="/gifs/image.gif" alt="TITLE FROM ABOVE">
+  <!-- Copy and paste at top of entries for new one
+  <p><a href="javascript:void(0)" onclick="toggleGif('ID-OF-BELOW')">DD Month YYYY - TEAM Player (Umpire)</a>
+  <img id="INSERT-ABOVE" src="/gifs/image.gif" alt="TITLE FROM ABOVE"></p>
   -->
-  <a href="javascript:void(0)" onclick="toggleGif('blakney-bart');">6 March 2020 - SF Joey Bart (Ryan Blakney)</a>
-  <img id="blakney-bart" src="gifs/blakney-bart.gif" alt="6 March 2020 - SF Joey Bart (Ryan Blakney)">
+  <p><a href="javascript:void(0)" onclick="toggleGif('blakney-bart');">6 March 2020 - SF Joey Bart (Ryan Blakney)</a>
+  <img id="blakney-bart" src="gifs/blakney-bart.gif" alt="6 March 2020 - SF Joey Bart (Ryan Blakney)"></p>
 </body>
 <script>
-  function toggleGif(idName) {
-    const img = document.getElementById(idName);
-    img.style.display = img.style.display === "none" || img.style.display === "" ? img.style.display = "block" : img.style.display = "none";
-  }
+  const toggleGif = idName => (document.getElementById(idName).style.display = 
+                              document.getElementById(idName).style.display === "none"
+                              ||
+                              document.getElementById(idName).style.display === ""
+                              ?
+                              "block"
+                              :
+                              "none");
 </script>
 </html>
