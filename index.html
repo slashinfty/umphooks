@@ -12,6 +12,7 @@
     }
     img {
       margin: 10px 0px 10px 0px;
+      display: none;
     }
   </style>   
 </head>
@@ -24,16 +25,12 @@
   <img id="INSERT-ABOVE" style="display:none" src="/gifs/image.gif" alt="TITLE FROM ABOVE">
   -->
   <a href="javascript:void(0)" onclick="toggleGif('blakney-bart');">6 March 2020 - SF Joey Bart (Ryan Blakney)</a>
-  <img id="blakney-bart" style="display:none" src="/gifs/blakney-bart.gif" alt="6 March 2020 - SF Joey Bart (Ryan Blakney)">
+  <img id="blakney-bart" src="gifs/blakney-bart.gif" alt="6 March 2020 - SF Joey Bart (Ryan Blakney)">
 </body>
 <script>
   function toggleGif(idName) {
     const img = document.getElementById(idName);
-    if (img.style.display === "none") {
-      img.style.display = "block";
-    } else {
-      img.style.display = "none";
-    }
+    img.style.display = img.style.display === "none" || img.style.display === "" ? img.style.display = "block" : img.style.display = "none";
   }
 </script>
 </html>
